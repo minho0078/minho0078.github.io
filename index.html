@@ -16,14 +16,19 @@
             cursor:pointer;
          }
       </style>
+
       <script>
-         var gContext = getContextPath();
-         function getContextPath() {
-   			var hostIndex = location.href.indexOf( location.host ) + location.host.length;
-   			return location.href.substring( hostIndex, location.href.indexOf('/', hostIndex + 1) );
-   		};
+         var gMenu="";
+
+         function viewPage(oThis){
+            var obj = $(oThis);
+            alert(obj.text());
+         }
+
+         function setMenu($scope){
+            $scope.menus=["java","nodejs"];
+         }
       </script>
-      <script src="http://minho0078.github.io/res/js/main.js"></script>
 
    </head>
    <body>
