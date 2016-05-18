@@ -1,0 +1,18 @@
+/* 메뉴 JSON */
+var gp = {
+
+   "menu":["java", "nodejs", "electron"]
+
+   , "subMenu":{
+         "java":["springFramework"]
+         ,"nodejs":["express","jade","ejb"]
+         ,"electron":[]
+      }
+
+   , "color":{
+         "menu":{
+            "init":"#000000"
+            ,"choosed":"red"
+         }
+      }
+};

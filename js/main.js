@@ -1,19 +1,13 @@
-var gp = {
-   "menu":["java", "nodejs", "electron"]
-   , "subMenu":{
-      "java":["springFramework"]
-      ,"nodejs":["express","jade","ejb"]
-      ,"electron":[]
-   }
-};
-
 var app = angular.module('menuApp',[]);
 
 app.controller('setMenu', function($scope){
    $scope.menus=gp.menu;
    $scope.setSubMenu = function(menu,$event){
-      $(".menu_icon").css("color","#000000"); //menu color initialize
-      $scope.subMenus = gp.subMenu[menu]; // set submenu by choosed menu
-      $(event.currentTarget).css("color","red"); // set subMenu color
+      //-메뉴 색상 초기화
+      $(".menu_icon").css("color",gp.color.menu.init);
+      //-선택한 메뉴의 서브 메뉴 세팅.
+      $scope.subMenus = gp.subMenu[menu];
+      //-선택한 메뉴 색상 세팅.
+      $(event.currentTarget).css("color",gp.color.menu.choosed);
    }
 });
