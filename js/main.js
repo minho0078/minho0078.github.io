@@ -1,10 +1,19 @@
-var gMenu="";
+var gp = {
+   "menu":["java", "nodejs", "electron"]
+   , "subMenu":{
+      "java":["springFramework"]
+      ,"nodejs":["express","jade","ejb"]
+      ,"electron":[]
+   }
+};
 
-function viewPage(oThis){
-   var obj = $(oThis);
-   alert(obj.text());
-}
+var app = angular.module('menuApp',[]);
 
-function setMenu($scope){
-   $scope.menus=["java","nodejs"];
-}
+app.controller('setMenu', function($scope){
+   $scope.menus=gp.menu;
+   $scope.setSubMenu = function(menu,$event){
+      $(".menu_icon").css("color","#000000"); //menu color initialize
+      $scope.subMenus = gp.subMenu[menu]; // set submenu by choosed menu
+      $(event.currentTarget).css("color","red"); // set subMenu color
+   }
+});
