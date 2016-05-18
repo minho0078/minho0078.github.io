@@ -17,7 +17,7 @@
       <!-- BEGIN >>  ng-app : menuApp -->
       <div id="gHead" ng-app="menuApp" ng-controller="setMenu" >
          <span class="menu_icon" ng-repeat="menu in menus" ng-click="setSubMenu(menu,$event)">{{menu}}</span>
-         <br/>
+         <div class="gap"></div>
          <span class="menu_icon subMenu" ng-repeat="sub in subMenus" ng-click="">{{sub}}</span>
       </div>
       <!-- END >>  ng-app : menuApp  -->
@@ -26,6 +26,6 @@
 
       <div id="gMain">
       </div>
-      
+
    </body>
 </html>
