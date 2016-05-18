@@ -8,6 +8,12 @@ var gp = {
          ,"nodejs":["express","jade","ejb"]
          ,"electron":[]
       }
+   , "callHtml":{
+      "springFramework":"./java/springFramework.html"
+      ,"express":{
+
+      }
+   }
 
    , "color":{
          "menu":{
@@ -15,4 +21,5 @@ var gp = {
             ,"choosed":"red"
          }
       }
+
 };

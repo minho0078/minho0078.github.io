@@ -13,17 +13,19 @@ app.controller('setMenu', function($scope,$http){
 
    //SUB메뉴 선택 시, 메인 화면 HTML 호출.
    $scope.getMain = function(sub,$event){
-      $scope.mainHtml = "'./html/java.html'";
-/*
+         //$('#gMain').attr('src',"'./html/java.html'");
+         $scope.mainHtml = "./html/java.html";
+         /*
          $http({
             method : "GET",
             url : "./html/java.html"
          }).then(function mySucces(response){
+            console.log(response);
             $scope.mainHtml = response.data;
          }, function myError(response){
             $scope.mainHtml = response.status.Text;
          });
-*/
+
 /*
          $http.get("./html/java.html")
          .then(function(resp){
