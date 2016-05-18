@@ -14,7 +14,8 @@ app.controller('setMenu', function($scope,$http){
    //SUB메뉴 선택 시, 메인 화면 HTML 호출.
    $scope.getMain = function(sub,$event){
          //$('#gMain').attr('src',"'./html/java.html'");
-         $scope.mainHtml = "./html/java.html";
+
+         $scope.mainHtml = gp.callHtml[sub];
          /*
          $http({
             method : "GET",

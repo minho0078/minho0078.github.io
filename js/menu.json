@@ -6,13 +6,14 @@ var gp = {
    , "subMenu":{
          "java":["springFramework"]
          ,"nodejs":["express","jade","ejb"]
-         ,"electron":[]
+         ,"electron":["electron"]
       }
    , "callHtml":{
-      "springFramework":"./java/springFramework.html"
-      ,"express":{
-
-      }
+      "springFramework":"./html/java/springFramework.html"
+      ,"express":"./html/nodejs/express.html"
+      ,"jade":"./html/nodejs/jade.html"
+      ,"ejb":"./html/nodejs/ejb.html"
+      ,"electron":"./html/electron/electron.html"
    }
 
    , "color":{
