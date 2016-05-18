@@ -25,7 +25,7 @@ app.controller('setMenu', function($scope,$http){
 */
          $http.get("./html/java.html")
          .then(function(resp){
-            $scope.mainHtml = resp.data;
+            $scope.mainHtml = resp;
          });
    }
 
