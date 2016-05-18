@@ -10,21 +10,22 @@
       <script src="./js/main.js"></script>
       <link href="./css/main.css" rel="stylesheet"/>
    </head>
-   <body>
+   <body ng-app="menuApp" ng-controller="setMenu" >
       <h1>AngularJS TEST</h1>
       <hr/>
 
       <!-- BEGIN >>  ng-app : menuApp -->
-      <div id="gHead" ng-app="menuApp" ng-controller="setMenu" >
+      <div id="gHead"  >
          <span class="menu_icon" ng-repeat="menu in menus" ng-click="setSubMenu(menu,$event)">{{menu}}</span>
          <div class="gap"></div>
-         <span class="menu_icon subMenu" ng-repeat="sub in subMenus" ng-click="">{{sub}}</span>
+         <span class="menu_icon subMenu" ng-repeat="sub in subMenus" ng-click="getMain(sub,$event);">{{sub}}</span>
       </div>
       <!-- END >>  ng-app : menuApp  -->
 
       <hr/>
 
-      <div id="gMain">
+      <div id="gMain" ng-include="'html/java.html'">
+         {{mainHtml}}
       </div>
 
    </body>
