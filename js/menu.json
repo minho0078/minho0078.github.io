@@ -1,20 +1,24 @@
 /* 메뉴 JSON */
 var gp = {
 
-   "menu":["java", "nodejs", "electron"]
+   "menu":["Home", "Language", "Contact me"]
 
    , "subMenu":{
-         "java":["springFramework"]
-         ,"nodejs":["express","jade","ejb"]
-         ,"electron":["electron"]
+         "Home":["greet"]
+         ,"Language":["java","php","c#","nodejs","android"]
+         ,"Contact me":["contact"]
       }
 
    , "callHtml":{
-      "springFramework":"./html/java/springFramework.html"
-      ,"express":"./html/nodejs/express.html"
-      ,"jade":"./html/nodejs/jade.html"
-      ,"ejb":"./html/nodejs/ejb.html"
-      ,"electron":"./html/electron/electron.html"
+      "greet":"./html/home/greet.html"
+
+      ,"java":"./html/language/java.html"
+      ,"php":"./html/language/php.html"
+      ,"c#":"./html/language/csharp.html"
+      ,"nodejs":"./html/language/nodejs.html"
+      ,"android":"./html/language/android.html"
+    
+      ,"contact":"./html/contact/contact.html"
    }
 
    , "color":{
